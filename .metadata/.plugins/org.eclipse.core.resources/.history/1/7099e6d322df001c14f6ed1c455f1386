@@ -1,0 +1,32 @@
+package Baselayer;
+
+import org.testng.annotations.BeforeMethod;
+
+public class Raman {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		public class Raman {
+			public static WebDriver driver = null;
+
+		@BeforeMethod
+		public void setup() {
+		System.setProperty("webdriver.chrome.driver","D:\\Selenium\\chromedriver_wi n32\\chromedriver.exe");
+		driver= new ChromeDriver(); driver.manage().window().maximize(); driver.get("https://www.flipkart.com");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		}
+		
+		@AfterMethod
+		public void tearDown() {
+		driver.close();
+		}
+
+	}
+
+	private static void setup() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
